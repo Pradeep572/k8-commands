@@ -10,3 +10,8 @@ Step 1 — Cordon Node
 kubectl cordon <node-name>
 Step 2 — Drain Node
 kubectl drain <node-name> --ignore-daemonsets --delete-local-data
+
+kubectl scale --replicas=6 deployment demo-nginx
+kubectl delete pod demo-nginx-686d55c7f-bkdgp
+kubectl get deployments
+kubectl get pods
