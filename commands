@@ -1,2 +1,12 @@
 Filter Pods by Node  
 kubectl get pods -A -o wide | grep ip-10-0-1-25
+
+Delete a node
+cordon → stop new traffic
+drain  → move running apps
+delete → shutdown server
+
+Step 1 — Cordon Node
+kubectl cordon <node-name>
+Step 2 — Drain Node
+kubectl drain <node-name> --ignore-daemonsets --delete-local-data
