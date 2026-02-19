@@ -1,0 +1,2 @@
+Filter Pods by Node  
+kubectl get pods -A -o wide | grep ip-10-0-1-25
